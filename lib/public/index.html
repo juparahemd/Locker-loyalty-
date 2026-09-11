@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LOCKER Coffee — Loyalty Points</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button id="btnEn" class="lang-btn active" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">|</span>
+    <button id="btnAr" class="lang-btn" onclick="setLang('ar')">AR</button>
+  </div>
+
+  <main class="card">
+    <div class="logo">LOCKER</div>
+    <div class="tagline" data-en="COFFEE" data-ar="قهوة">COFFEE</div>
+
+    <h1 class="title" data-en="Loyalty Points" data-ar="نقاط الولاء">Loyalty Points</h1>
+    <p class="subtitle" data-en="Enter your phone number or customer code to check your points."
+       data-ar="أدخل رقم هاتفك أو رمز العميل الخاص بك لمعرفة نقاطك.">
+       Enter your phone number or customer code to check your points.
+    </p>
+
+    <form id="searchForm" autocomplete="off">
+      <input
+        type="text"
+        id="queryInput"
+        inputmode="tel"
+        data-en-placeholder="Phone number or customer code"
+        data-ar-placeholder="رقم الهاتف أو رمز العميل"
+        placeholder="Phone number or customer code"
+        required
+      />
+      <button type="submit" id="searchBtn" data-en="Check my points" data-ar="تحقق من نقاطي">
+        Check my points
+      </button>
+    </form>
+
+    <div id="resultBox" class="result-box hidden"></div>
+  </main>
+
+  <footer class="footer" data-en="LOCKER Coffee © loyalty program" data-ar="لوكر كوفي © برنامج الولاء">
+    LOCKER Coffee © loyalty program
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
